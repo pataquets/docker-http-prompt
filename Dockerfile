@@ -8,6 +8,7 @@ RUN \
   && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/
-RUN pip install http-prompt
+RUN \
+  pip install --no-cache-dir http-prompt
 
 ENTRYPOINT [ "http-prompt" ]
